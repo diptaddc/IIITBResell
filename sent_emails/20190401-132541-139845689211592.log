@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: dipta.ddc@gmail.com
+Date: Mon, 01 Apr 2019 13:25:41 -0000
+Message-ID: <155412514106.7774.53108375109596064@dipta-Aspire-A515-51G>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MQ/554-290fb49dc80cf71fee55/
+
+Your username, in case you've forgotten: dipta
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
