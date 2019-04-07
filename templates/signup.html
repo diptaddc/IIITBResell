@@ -10,7 +10,7 @@
 		<form method="post">
   		{% csrf_token %}
   		{{ form|crispy }}
-  		<button class = "btn btn-primary" type="submit">Sign up</button>
+  	 	<button class = "btn btn-primary" type="submit">Sign up</button>
   		<a class="btn btn-success" href="{% url 'home' %}" role="button">Back</a>
 		</form>	
 		<div class="text-center">
