@@ -1,0 +1,16 @@
+{% extends "base_pages/blank.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class = "jumbotron" >
+	{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+{% endif %}
+{% endblock %}
+</div>
