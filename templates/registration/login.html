@@ -1,0 +1,22 @@
+{% extends "base_pages/blank.html"%}
+{% load crispy_forms_tags %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="card card-register mx-auto mt-5">
+	<div class="card-header"><h2>Sign In</h3></div>
+	<div class="card-body">
+		<form method="post">
+  		{% csrf_token %}
+  		{{ form|crispy }}
+  		</br>
+  		<button class = "btn btn-primary" type="submit">Sign In</button>
+  		<a class="btn btn-success" href="{% url 'home' %}" role="button">Back</a>
+		</form>	
+		<div class="text-center">
+          {# <a class="d-block small mt-3" href="#">Login Page</a> #}
+          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+    	</div>
+	</div>
+</div>
+{% endblock %}
