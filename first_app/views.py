@@ -28,12 +28,18 @@ def product_list(request):
     return render(request, 'first_app/product_list.html', params)
 
 
+def productView(request, myid):
+    # Fetch the product using the id
+    products = Product_Details.objects.filter(id=myid)
+    params = {'product' : products[0]}
+    print(products[0].Price)
+    return render(request, 'first_app/prodView.html', params)
 
-
-
-
-
-
+def productView_new(request,myid):
+    products = Product_Details.objects.filter(id=myid)
+    params = {'product' : products[0]}
+    print(products[0].Price)
+    return render(request, 'first_app/productView_new.html', params)
 
 
 def form_name_view(request):

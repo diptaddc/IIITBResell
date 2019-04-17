@@ -3,4 +3,6 @@ from first_app.models import Product_Details
 
 # Register your models here.
 
-admin.site.register(Product_Details)
+class ProductAdmin(admin.ModelAdmin):
+	readonly_fields = ('id',)
+admin.site.register(Product_Details,ProductAdmin)
