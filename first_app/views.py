@@ -1,14 +1,19 @@
 from django.shortcuts import render,redirect
 from first_app.forms import ProductForm
+from accounts.forms import CustomUserCreationForm
 from django.core.files.storage import FileSystemStorage
 from . import forms
-from .models import Product_Details
+from first_app.models import Product_Details,Images
 from math import ceil
+from django.contrib.auth.decorators import login_required
+from django.forms import modelformset_factory
+from django.conf import settings
+from django.db.models import Count
 
 # Create your views here.
 from django.http import HttpResponse
 
-
+@login_required()
 def product_list(request):
     #products = Product_Details.objects.all()
     #n = len(products)
@@ -37,18 +42,52 @@ def productView(request, myid):
 
 def productView_new(request,myid):
     products = Product_Details.objects.filter(id=myid)
-    params = {'product' : products[0]}
+    imeg= Images.objects.filter(post=products[0])
+    x=imeg.count()
+    print(x)
+    image_url=settings.MEDIA_URL
+    print(image_url)
+    url=[]
+    for i in range(0,x):
+        image=image_url+'/'+imeg[i].image.name
+        print(image)
+        url.append(image)
+    params = {'product' : products[0],
+    'images':url,
+    }
     print(products[0].Price)
     return render(request, 'first_app/productView_new.html', params)
 
-
+@login_required()
 def form_name_view(request):
+    ImageFormset = modelformset_factory(Images, fields=('image',), extra=4)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('product_list')
+        formset = ImageFormset(request.POST or None, request.FILES or None)
+        if form.is_valid() and formset.is_valid():
+            post=form.save(commit=False)
+            post.user=request.user
+            post.save()
+
+            for f in formset:
+                try:
+                    photo=Images(post=post,image=f.cleaned_data['image'])
+                    photo.save()
+                except Exception as e:
+                    break
+        return redirect('product_list')
 
     else:
         form = ProductForm()
-    return render(request,"first_app/product_data.html", {'form': form})
+        formset = ImageFormset(queryset=Images.objects.none())
+
+    context={
+    'form':form,
+    'formset':formset,
+    }
+
+    return render(request,"first_app/product_data.html", context)
+
+
+def search(request):
+    return render(request, 'first_app/images.html')
