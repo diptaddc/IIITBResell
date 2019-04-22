@@ -3,15 +3,17 @@ from first_app.forms import ProductForm
 from accounts.forms import CustomUserCreationForm
 from django.core.files.storage import FileSystemStorage
 from . import forms
-from first_app.models import Product_Details,Images
+from first_app.models import Product_Details,Images,UserProfile
 from math import ceil
 from django.contrib.auth.decorators import login_required
 from django.forms import modelformset_factory
 from django.conf import settings
 from django.db.models import Count
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 # Create your views here.
-from django.http import HttpResponse
 
 @login_required()
 def product_list(request):
@@ -89,5 +91,17 @@ def form_name_view(request):
     return render(request,"first_app/product_data.html", context)
 
 
-def search(request):
-    return render(request, 'first_app/images.html')
+@login_required()
+def home(request):
+    my_user_profile = UserProfile.objects.filter(user=request.user.id).first()
+    print(my_user_profile)
+    products = Product_Details.objects.filter(user=my_user_profile.user.id)
+    context = {
+    	'products': products
+    }
+    return render(request, "first_app/home.html", context)
+
+
+class ProductDelete(DeleteView):
+    model = Product_Details
+    success_url = reverse_lazy('first_app:home')
