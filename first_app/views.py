@@ -34,7 +34,7 @@ def product_list(request):
     params = {'allProds':allProds}
     return render(request, 'first_app/product_list.html', params)
 
-
+@login_required()
 def productView(request, myid):
     # Fetch the product using the id
     products = Product_Details.objects.filter(id=myid)
@@ -42,6 +42,7 @@ def productView(request, myid):
     print(products[0].Price)
     return render(request, 'first_app/prodView.html', params)
 
+@login_required()
 def productView_new(request,myid):
     products = Product_Details.objects.filter(id=myid)
     imeg= Images.objects.filter(post=products[0])

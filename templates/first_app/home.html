@@ -1,4 +1,4 @@
-{% extends 'base_pages/blank.html' %}
+{% extends 'base_pages/blank2.html' %}
 {% load bootstrap3 %}
 {% load staticfiles %}
 
@@ -30,8 +30,8 @@
                     <form action="{% url 'first_app:product-delete' product.id %}" method="post" style="display: inline;">
                         {% csrf_token %}
                         <input type="hidden" name="product_id" value="{{ product.id }}"/>
-                        <button type="submit" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-trash"></span>
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                            
                         </button>
                     </form>
 

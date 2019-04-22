@@ -3,6 +3,7 @@ from django.shortcuts import render,redirect
 from first_app.models import Product_Details
 from first_app.forms import ProductForm
 from math import ceil
+from django.contrib.auth.decorators import login_required
 
 def product_list(request):
     #products = Product_Details.objects.all()
