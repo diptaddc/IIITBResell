@@ -7,7 +7,8 @@ app_name = 'first_app'
 
 urlpatterns = [
     url(r"profile/$", views.profile, name='profile'),
-    url(r"product_data/$",views.form_name_view,name='form_name'),
+    url(r'^search/$', views.search , name='search'),
+    url(r"product_data/$",views.form_name_view,name='product_data'),
     url(r"product_list/$",views.product_list,name='product_list'),
     path("products/<int:myid>", views.productView, name="ProductView"),
     path("products_new/<int:myid>", views.productView_new, name="Prod"),

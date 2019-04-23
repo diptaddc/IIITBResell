@@ -1,13 +1,41 @@
-{% extends 'base_pages/blank.html' %}
+{% extends 'base_pages/blank2.html' %}
+
+{% load bootstrap3 %}
+{% load staticfiles %}
+
 
 {% block content %}
-  <form method="get">
-    {{ filter.form.as_p }}
-    <button type="submit">Search</button>
-  </form>
-  <ul>
-  {% for Product_Details in filter.qs %}
-    <li>{{ Product_Details.Product_Name }} - <img src='/media/{{Product_Details.Picture}}' class="card-img-top" alt="..." style = "width : auto"></li>
-  {% endfor %}
-  </ul>
+<div class="ebook-container container-fluid">
+    {% if product_list %}
+
+            {% for product in product_list %}
+<div class="thumbnail">
+              <div class="row">
+
+                <div class="col-sm-2">
+                    <!-- Album logo -->
+                    <a>
+                      <img src='/media/{{product.Picture}}' class="card-img-top" alt="..." style = "width : auto">
+                    </a>
+                </div>
+                <div class="col-sm-10">
+                    <div class="caption">
+                        <h2>{{ product.Product_Name }}</h2>
+                        <h4>{{ product.Brand }}</h4>
+                        <h4>{{ product.Price }}</h4>
+                    </div>
+
+
+                    <!-- Delete -->
+
+                    </div>
+                 </div>
+    </div>
+            {% endfor %}
+    {% else %}
+        <h3> Product not found </h3>
+
+  {% endif %}
+
+</div>
 {% endblock %}

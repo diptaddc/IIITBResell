@@ -109,7 +109,17 @@ class ProductDelete(DeleteView):
 
 
 
+
+@login_required()
 def search(request):
-    user_list = Product_Details.objects.all()
-    user_filter = UserFilter(request.GET, queryset=user_list)
-    return render(request, 'first_app/search.html', {'filter': user_filter})
+    if request.method == 'POST':
+        Product_name =  request.POST.get('search')
+        print(Product_name)
+        try:
+            status = Product_Details.objects.filter(Product_Name__icontains=Product_name)
+            
+        except Product_Details.DoesNotExist:
+            status = None
+        return render(request,"first_app/search.html",{"product_list":status})
+    else:
+        return render(request,"first_app/search.html")
