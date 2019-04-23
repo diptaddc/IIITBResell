@@ -106,3 +106,10 @@ def profile(request):
 class ProductDelete(DeleteView):
     model = Product_Details
     success_url = reverse_lazy('first_app:home')
+
+
+
+def search(request):
+    user_list = Product_Details.objects.all()
+    user_filter = UserFilter(request.GET, queryset=user_list)
+    return render(request, 'first_app/search.html', {'filter': user_filter})
