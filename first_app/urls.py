@@ -12,5 +12,6 @@ urlpatterns = [
     url(r"product_list/$",views.product_list,name='product_list'),
     path("products/<int:myid>", views.productView, name="ProductView"),
     path("products_new/<int:myid>", views.productView_new, name="Prod"),
+    path("products_category/<str:mycat>",views.productCat,name="ProdCat"),
     url(r'first_app/(?P<pk>[0-9]+)/delete/$', login_required(views.ProductDelete.as_view()), name='product-delete'),
 ]

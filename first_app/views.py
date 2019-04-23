@@ -61,6 +61,21 @@ def productView_new(request,myid):
     print(products[0].Price)
     return render(request, 'first_app/productView_new.html', params)
 
+
+
+@login_required
+def productCat(request,mycat):
+    products = Product_Details.objects.filter(Category=mycat)
+    params = {'productcat' : products}
+    return render(request, 'first_app/productcat.html',params)
+
+
+
+
+
+
+
+
 @login_required()
 def form_name_view(request):
     ImageFormset = modelformset_factory(Images, fields=('image',), extra=4)
@@ -123,3 +138,5 @@ def search(request):
         return render(request,"first_app/search.html",{"product_list":status})
     else:
         return render(request,"first_app/search.html")
+
+
