@@ -93,7 +93,7 @@ def form_name_view(request):
 
 
 @login_required()
-def home(request):
+def profile(request):
     my_user_profile = UserProfile.objects.filter(user=request.user.id).first()
     print(my_user_profile)
     products = Product_Details.objects.filter(user=my_user_profile.user.id)

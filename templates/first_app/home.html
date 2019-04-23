@@ -30,8 +30,8 @@
                     <form action="{% url 'first_app:product-delete' product.id %}" method="post" style="display: inline;">
                         {% csrf_token %}
                         <input type="hidden" name="product_id" value="{{ product.id }}"/>
-                        <button type="submit" class="btn btn-primary">Delete</button>
-                            
+                        <button type="submit" class="btn btn-danger">Delete</button>
+
                         </button>
                     </form>
 
