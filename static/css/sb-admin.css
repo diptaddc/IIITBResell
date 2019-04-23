@@ -206,6 +206,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  object-fit: contain;
 }
 
 svg {

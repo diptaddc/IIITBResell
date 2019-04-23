@@ -8,9 +8,9 @@
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a> |
-  <a href="{% url 'signup' %}">signup</a>
+  <h4>You are not logged in</h4>
+  <a class = "btn btn-primary" href="{% url 'login' %}">Login</a>
+  <a class="btn btn-success" href="{% url 'signup' %}">Signup</a>
 {% endif %}
 {% endblock %}
 </div>

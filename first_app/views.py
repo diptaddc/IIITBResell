@@ -100,7 +100,7 @@ def profile(request):
     context = {
     	'products': products
     }
-    return render(request, "first_app/home.html", context)
+    return render(request, "first_app/profile.html", context)
 
 
 class ProductDelete(DeleteView):

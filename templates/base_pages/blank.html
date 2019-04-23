@@ -11,7 +11,6 @@
   <meta name="author" content="">
 
   <title>WebPage</title>
-
   <!-- Custom fonts for this template-->
   <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
@@ -35,6 +34,7 @@
       <i class="fas fa-bars"></i>
     </button>
 
+
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" role="search" method="POST" action="{% url 'first_app:search' %}">
       {% csrf_token %}
@@ -47,6 +47,10 @@
         </div>
       </div>
     </form>
+
+
+
+
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
@@ -101,7 +105,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>Category</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Login Screens:</h6>
@@ -126,7 +130,6 @@
           </a>
         </li>
       </li>
-
       <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
