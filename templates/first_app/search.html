@@ -1,0 +1,13 @@
+{% extends 'base_pages/blank.html' %}
+
+{% block content %}
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+  {% for Product_Details in filter.qs %}
+    <li>{{ Product_Details.Product_Name }} - <img src='/media/{{Product_Details.Picture}}' class="card-img-top" alt="..." style = "width : auto"></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

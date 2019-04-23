@@ -26,7 +26,11 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path("first_app/", include("first_app.urls", namespace="first_app")),
-    path("product_list/", views.product_list, name='product_list'),
+    path("first_app/product_list/", views.product_list, name='product_list'),
+    path("first_app/product_data/", views.product_list, name='product_data'),
+    path('first_app/user_profile', views.profile, name='profile'),
+
+
 ]
 
 if settings.DEBUG:
