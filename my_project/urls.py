@@ -29,6 +29,7 @@ urlpatterns = [
     path("first_app/product_list/", views.product_list, name='product_list'),
     path("first_app/product_data/", views.product_list, name='product_data'),
     path('first_app/user_profile', views.profile, name='profile'),
+    path('first_app/search', views.search, name='search'),
 
 
 ]
