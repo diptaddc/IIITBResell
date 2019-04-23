@@ -105,7 +105,7 @@ def profile(request):
 
 class ProductDelete(DeleteView):
     model = Product_Details
-    success_url = reverse_lazy('first_app:home')
+    success_url = reverse_lazy('first_app:profile')
 
 
 
