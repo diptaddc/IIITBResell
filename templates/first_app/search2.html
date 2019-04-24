@@ -1,0 +1,56 @@
+{% extends 'first_app/basic.html' %}
+
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="ebook-container container-fluid">
+    {% if product_list %}
+
+            <div class="container">
+                <!--Slideshow starts here -->
+                {% for product,range, nSlides in allProds %}
+                <div class =  "jumbotron jumbotron-fluid">
+                  <h3 class = "display-5 text-center" >Recommended {{product.0.Category}} Items</h3>
+                  <div class="container">
+                    <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
+                      <ul class="carousel-indicators">
+                        <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+                        {% for i in range %}
+                        <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}" ></li>
+                        {% endfor %}
+                      </ul>
+                      <div class="container carousel-inner">
+                        <div class="carousel-item active">
+                        {% for i in product %}
+                          <div class="col-md-4 col-md-3">
+                            <div class="card mb-4 text-white bg-dark" >
+                            <img src='/media/{{i.Picture}}' class="card-img-top" alt="..." style = "width : auto">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{i.Product_Name}}</h5>
+                                  <p class="card-text">{{i.Price}}</p>
+                                  <p class="card-text">{{i.Brand}}</p>
+                                   <a href="/first_app/products_new/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary">View</button></a>
+                                </div>
+                            </div>
+                          </div>
+                          {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and not forloop.last %}
+                        </div>
+                        <div class="carousel-item">
+                        {% endif %}
+                        {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+            </div>
+    {% else %}
+        <h3> Product not found </h3>
+
+  {% endif %}
+
+</div>
+{% endblock %}

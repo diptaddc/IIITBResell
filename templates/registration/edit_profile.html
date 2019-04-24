@@ -1,0 +1,20 @@
+{% extends 'first_app/basic.html' %}
+{% load bootstrap3 %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<body>
+  <div class="container">
+      <form method="post">
+          {% csrf_token %}
+          {{ form | crispy  }}
+          <button type="submit" onclick="return confirm('Are you sure you want update your details?');"class="btn btn-danger">Update</button>
+      </form>
+      <br>
+  </div>
+</body>
+
+{% endblock %}
