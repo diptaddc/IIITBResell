@@ -139,26 +139,26 @@ def search(request):
         return render(request,"first_app/search.html")
 
 
-def search_it(request):
-    if request.method == 'POST':
-        Product_name =  request.POST.get('search')
-        print(Product_name)
-        allProds = []
-        catprods = Product_Details.objects.values('Category', 'id')
-        cats = {item['Category'] for item in catprods}
-        try:
-            status = Product_Details.objects.filter(Product_Name__icontains=Product_name)
-        except Product_Details.DoesNotExist:
-            status = None
-        for cat in cats:
-            prod = Product_Details.objects.filter(Product_Name__icontains=Product_name,Category=cat)
-            n = len(prod)
-            if n!=0:
-                nSlides = n // 4 + ceil((n / 4) - (n // 4))
-                allProds.append([prod, range(1, nSlides), nSlides])
-        params = {'allProds':allProds,
-        'product_list':status,}
-
-        return render(request,"first_app/search2.html",params)
-    else:
-        return render(request,"first_app/search2.html")
+# def search_it(request):
+#     if request.method == 'POST':
+#         Product_name =  request.POST.get('search')
+#         print(Product_name)
+#         allProds = []
+#         catprods = Product_Details.objects.values('Category', 'id')
+#         cats = {item['Category'] for item in catprods}
+#         try:
+#             status = Product_Details.objects.filter(Product_Name__icontains=Product_name)
+#         except Product_Details.DoesNotExist:
+#             status = None
+#         for cat in cats:
+#             prod = Product_Details.objects.filter(Product_Name__icontains=Product_name,Category=cat)
+#             n = len(prod)
+#             if n!=0:
+#                 nSlides = n // 4 + ceil((n / 4) - (n // 4))
+#                 allProds.append([prod, range(1, nSlides), nSlides])
+#         params = {'allProds':allProds,
+#         'product_list':status,}
+#
+#         return render(request,"first_app/search2.html",params)
+#     else:
+#         return render(request,"first_app/search2.html")
