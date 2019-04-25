@@ -1,0 +1,55 @@
+[24/Apr/2019 20:42:04] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:06:54] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET / HTTP/1.1" 200 6305 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/datatables/dataTables.bootstrap4.css HTTP/1.1" 200 5799 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/css/abc.css HTTP/1.1" 200 820 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54641 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/css/sb-admin.css HTTP/1.1" 200 214805 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 76308 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/js/sb-admin.min.js HTTP/1.1" 200 930 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927 basehttp.py
+[24/Apr/2019 21:07:04] INFO [django.server:154] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74316 basehttp.py
+[24/Apr/2019 21:07:04] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[24/Apr/2019 21:07:04] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[24/Apr/2019 21:07:04] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 3101 basehttp.py
+[24/Apr/2019 21:09:35] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:09:42] INFO [django.server:154] "GET /accounts/login/ HTTP/1.1" 200 7346 basehttp.py
+[24/Apr/2019 21:10:14] INFO [django.utils.autoreload:203] /home/dipta/Django Project/my_project/my_project/settings.py changed, reloading. autoreload.py
+[24/Apr/2019 21:10:15] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:10:28] INFO [django.server:154] "GET /accounts/login/ HTTP/1.1" 200 7346 basehttp.py
+[24/Apr/2019 21:10:37] INFO [django.server:154] "GET / HTTP/1.1" 200 6305 basehttp.py
+[24/Apr/2019 21:10:40] INFO [django.server:154] "GET /accounts/signup/ HTTP/1.1" 200 8881 basehttp.py
+[24/Apr/2019 21:26:52] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:27:06] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[24/Apr/2019 21:27:19] INFO [django.server:154] "GET / HTTP/1.1" 200 6305 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/datatables/dataTables.bootstrap4.css HTTP/1.1" 200 5799 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/css/abc.css HTTP/1.1" 200 820 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/css/sb-admin.css HTTP/1.1" 200 214805 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/js/sb-admin.min.js HTTP/1.1" 200 930 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 76308 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54641 basehttp.py
+[24/Apr/2019 21:27:20] INFO [django.server:154] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74316 basehttp.py
+[24/Apr/2019 21:27:20] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[24/Apr/2019 21:27:20] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[24/Apr/2019 21:27:20] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 3101 basehttp.py
+[24/Apr/2019 21:27:22] INFO [django.server:154] "GET /accounts/login/ HTTP/1.1" 200 7346 basehttp.py
+[24/Apr/2019 21:27:29] INFO [django.server:154] "POST /accounts/login/ HTTP/1.1" 302 0 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /first_app/product_list/ HTTP/1.1" 200 19384 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/laptop1.jpeg HTTP/1.1" 200 3054 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/dumbbel1.jpeg HTTP/1.1" 200 5424 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/football1.jpeg HTTP/1.1" 200 6872 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/induction1.jpeg HTTP/1.1" 200 6109 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/bat1_VET1tOJ.jpeg HTTP/1.1" 200 3013 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/racket1.jpeg HTTP/1.1" 200 8162 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/ref1.jpeg HTTP/1.1" 200 4934 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/tennis1.jpeg HTTP/1.1" 200 5099 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/matress1.jpeg HTTP/1.1" 200 5875 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/mobile1.jpeg HTTP/1.1" 200 5905 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/bag1.jpeg HTTP/1.1" 200 5296 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/tv1.jpeg HTTP/1.1" 200 7208 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/study1.jpeg HTTP/1.1" 200 7784 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/bottle1.jpeg HTTP/1.1" 200 8271 basehttp.py
+[24/Apr/2019 21:27:30] INFO [django.server:154] "GET /media/guitar1.jpeg HTTP/1.1" 200 3805 basehttp.py

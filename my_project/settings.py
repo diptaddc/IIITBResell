@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
 LOGGING = {
   'version': 1,
   'disable_existing_loggers': False,
@@ -44,9 +45,9 @@ LOGGING = {
   },
   'handlers': {
         'console': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple'
+            'formatter': 'standard'
         },
         'file': {
             'level':'INFO',
@@ -75,7 +76,7 @@ LOGGING = {
         #},
         'django': {
             'handlers': ['console'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': True,
         },
         'django': {
