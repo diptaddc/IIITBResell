@@ -14,7 +14,7 @@ Category_Choice = (
 
 class Product_Details(models.Model):
     user=models.ForeignKey(settings.AUTH_USER_MODEL,
-        null=True, blank=True,on_delete=models.SET_NULL)
+    null=True, blank=True,on_delete=models.SET_NULL)
     Product_Name=models.CharField(max_length=120)
     Category=models.CharField(max_length=120,choices=Category_Choice, default='other')
     Brand=models.CharField(max_length=120)
