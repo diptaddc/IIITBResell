@@ -34,11 +34,7 @@
                     <td>{{ product.Brand }}</td>
                     <td>{{ product.Price }}</td>
                     <td>
-                        <form action="{% url 'first_app:product-delete' product.id %}" method="post" style="display: inline;">
-                            {% csrf_token %}
-                            <input type="hidden" name="product_id" value="{{ product.id }}"/>
-                            <a href="/first_app/products_new/{{product.id}}"><button id="qv{{product.id}}" class="btn btn-primary">View</button></a>
-                        </form>
+                          <a href="/first_app/products_new/{{product.id}}"><button id="qv{{product.id}}" class="btn btn-primary">View</button></a>
                     </td>
                 </tr>
             {% endfor %}
