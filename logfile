@@ -121,3 +121,42 @@
 [25/Apr/2019 15:38:11] INFO [django.server:154] "GET /media//images/study3.jpeg HTTP/1.1" 200 7100 basehttp.py
 [25/Apr/2019 15:38:21] INFO [django.server:154] "GET /accounts/logout/ HTTP/1.1" 302 0 basehttp.py
 [25/Apr/2019 15:38:21] INFO [django.server:154] "GET / HTTP/1.1" 200 6305 basehttp.py
+[26/Apr/2019 05:28:33] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[26/Apr/2019 05:28:41] INFO [django.utils.autoreload:578] Watching for file changes with StatReloader autoreload.py
+[26/Apr/2019 05:28:48] INFO [django.server:154] "GET / HTTP/1.1" 200 6305 basehttp.py
+[26/Apr/2019 05:28:48] INFO [django.server:154] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54641 basehttp.py
+[26/Apr/2019 05:28:48] INFO [django.server:154] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927 basehttp.py
+[26/Apr/2019 05:28:48] INFO [django.server:154] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 76308 basehttp.py
+[26/Apr/2019 05:28:48] INFO [django.server:154] "GET /static/css/sb-admin.css HTTP/1.1" 200 214805 basehttp.py
+[26/Apr/2019 05:28:49] INFO [django.server:154] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74316 basehttp.py
+[26/Apr/2019 05:28:49] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[26/Apr/2019 05:28:49] WARNING [django.request:228] Not Found: /favicon.ico log.py
+[26/Apr/2019 05:28:49] WARNING [django.server:154] "GET /favicon.ico HTTP/1.1" 404 3101 basehttp.py
+[26/Apr/2019 05:28:50] INFO [django.server:154] "GET /accounts/login/ HTTP/1.1" 200 7346 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "POST /accounts/login/ HTTP/1.1" 302 0 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /first_app/product_list/ HTTP/1.1" 200 19384 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/football1.jpeg HTTP/1.1" 200 6872 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/laptop1.jpeg HTTP/1.1" 200 3054 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/mobile1.jpeg HTTP/1.1" 200 5905 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/induction1.jpeg HTTP/1.1" 200 6109 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/bat1_VET1tOJ.jpeg HTTP/1.1" 200 3013 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/ref1.jpeg HTTP/1.1" 200 4934 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/tennis1.jpeg HTTP/1.1" 200 5099 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/tv1.jpeg HTTP/1.1" 200 7208 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/dumbbel1.jpeg HTTP/1.1" 200 5424 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/racket1.jpeg HTTP/1.1" 200 8162 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/matress1.jpeg HTTP/1.1" 200 5875 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/bag1.jpeg HTTP/1.1" 200 5296 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/guitar1.jpeg HTTP/1.1" 200 3805 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/study1.jpeg HTTP/1.1" 200 7784 basehttp.py
+[26/Apr/2019 05:28:55] INFO [django.server:154] "GET /media/bottle1.jpeg HTTP/1.1" 200 8271 basehttp.py
+[26/Apr/2019 05:28:57] INFO [django.server:154] "GET /first_app/products_new/1 HTTP/1.1" 200 9453 basehttp.py
+[26/Apr/2019 05:28:58] INFO [django.server:154] "GET /media//images/dumbbel1.jpeg HTTP/1.1" 200 5424 basehttp.py
+[26/Apr/2019 05:28:58] INFO [django.server:154] "GET /static/css/addOn.css HTTP/1.1" 200 3452 basehttp.py
+[26/Apr/2019 05:28:58] INFO [django.server:154] "GET /media//images/dumbbel2.jpeg HTTP/1.1" 200 5805 basehttp.py
+[26/Apr/2019 05:28:58] INFO [django.server:154] "GET /media//images/dumbbel3.jpeg HTTP/1.1" 200 4675 basehttp.py
+[26/Apr/2019 05:28:58] INFO [django.server:154] "GET /media//images/dumbbel4.jpeg HTTP/1.1" 200 5319 basehttp.py
+[26/Apr/2019 05:29:03] INFO [django.server:154] "GET /accounts/profile/edit/ HTTP/1.1" 200 9623 basehttp.py
+[26/Apr/2019 05:29:05] INFO [django.server:154] "GET /first_app/profile/ HTTP/1.1" 200 17580 basehttp.py
+[26/Apr/2019 05:29:08] INFO [django.server:154] "GET /first_app/products_category/electronic HTTP/1.1" 200 11249 basehttp.py
+[26/Apr/2019 05:29:09] INFO [django.server:154] "GET /first_app/products_category/other HTTP/1.1" 200 11259 basehttp.py
